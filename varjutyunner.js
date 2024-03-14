@@ -285,7 +285,7 @@ console.log(geometricprogression1());
     //39
 
 
-
+dssdds
 
 
     //40
