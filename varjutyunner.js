@@ -101,39 +101,7 @@ console.log(`if the one of this number is  even return ${magilooperator(2, 1, 1)
 
 //27  kartacen true ete ete trvac tvere tvabanakan progressia en kazum , hakarak depqum false;
 
-function arithmeticprogression(numbers, n) {
-    for (let i = 0; i < numbers.length; i++) {
-        if (numbers[i] + (numbers[i] + n)) {
-            return true;
-        } else {
-            return false;
-        }
-    }
-}
-
-console.log(arithmeticprogression([2, 4]));
-
-
-
-//28  
-
-function geometricprogression(numbers, n) {
-    for (let i = 0; i < numbers.length; i++) {
-        if (numbers[i] * n) {
-            return true
-        }
-        else {
-            return false;
-        }
-    }
-}
-
-
-console.log(geometricprogression([5, 6]));
-
-
-
-
+ //28
 
 //29 trvac tvere kartacen achman kargi hajordakanutyamb
 
@@ -254,7 +222,7 @@ function ifodd(a, b, c, d) {
 console.log(`it is odd or not ,the result is  ${ifodd(7, 18, 18, 18)}`)
 
 
-//37 
+/*37 
 
 
 function arithmeticprogression1() {
@@ -288,124 +256,120 @@ function geometricprogression1() {
 console.log(geometricprogression1());
 
 
-
+*/
 //39
-
-
-function norm(n) {
-    let sum = 1;
-    for (i = 0; i < n; i++) {
-        if (n % i === 0) {
-            sum = sum * i;
-        }
-    }
-    return sum;
-}
-
-
-console.log(norm(80));
 
 //40
 
 
+/*51   t tramabanakan tipi popoxakanin  veragrel true arjeq , ete eranish tvi miavirneri tvanshane havasar e tasnavorneri ev haryuravorneri  tvanshanneri gumarin , 
+hakarak depqum artacel false , artacel t popoxakani arjeqe*/
+
+function tvariable(x){
+    let t ;
+if( Math.floor( x % 10 ) === Math.floor((x / 10) % 10)  + Math.floor( x /100) % 10){
+   t = true
+}else {
+ t = false;
+}
+console.log(`The t is ${t}`);
+}
+
+tvariable(122)
 
 
 
-//51  
 
-function eranishtiv() {
-    let t = true;
-    if (851 === 800 + 50) {
-        return t;
+//52  tramabanakan t popoxakanin veragrel ture arjeq , ete eranish tvi tvanshanneri mej kan irar havasar tvanshanner , hakarak depqum false , artacel t popoxakani arjeqe
+
+function tv(x) {
+    let t ;
+    if( Math.floor(x % 10)  === Math.floor((x / 10) % 10) ){ 
+       t = true 
+    }else if( Math.floor(x % 10) === Math.floor( x /100) % 10) {
+     t = true;
+    } else if (Math.floor((x / 10) % 10) === Math.floor( x /100) % 10){
+    t = true;
     } else {
-        return !t;
+        t = false;
     }
-}
 
-console.log(eranishtiv());
+  return  console.log(`The t is ${t}`);
+
+    };
+
+tv(123);
 
 
-//52 
+//53  hashvel ev artacel eranish tvi ev ir tvanshanneri gumari haraberutyan arjeqe ete eranish tvie mece trvac k tvic , hakarak depqum  miavorneri tvanshani ev eranish tvi haraberutyan arjeqe
 
-function ernaishtvitv() {
-
-    let t = true;
-    if (851 === (8 === 5 === 1)) {
-        return t;
+function eranishtivv(x,k) {
+    if (x > k) {
+      return  x / (Math.floor( x /100) % 10  + Math.floor((x / 10) % 10) + Math.floor(x % 10))
     } else {
-        return !t
-    }
-}
-
-console.log(ernaishtvitv());
-
-
-//53
-
-function eranishtivv() {
-    if (851 > k) {
-        851 / (8 + 5 + 1)
-    } else {
-        (8 + 5 + 1) / 851
+      return   (Math.floor( x /100) % 10  + Math.floor((x / 10) % 10) + Math.floor(x % 10)) / x
     }
 
 }
 
+console.log(eranishtivv(111,222))
 
-//54 
+//54
+//55
 
-function tiv() {
+//56  Hasvhel ev artacel eranish tvi tvanshanneri gumari ev eranish tvi haraberutyan arjeqe , ete miavorneri tvanshane mec i tasnavorneri tvanshanic , hakarak depqum artacel eranish tive
 
-}
-
-
-
-
-
-
-
-
-
-//56 
-
-function hicunvec() {
-    if (800 > 10) {
-        return (8 + 1 + 5) / 815;
+function tiv(x) {
+    if(Math.floor(x % 10)  > Math.floor((x / 10) % 10)){
+        return (Math.floor( x /100) % 10  + Math.floor((x / 10) % 10) + Math.floor(x % 10)) / x
+    }else{
+        return x ;
     }
-    else return 815
 }
 
-console.log(hicunvec());
+console.log(tiv(816))
 
 
 
+function xx(x){
+    return Math.floor( x /100) % 10 / Math.floor( x % 10) 
+}
 
-//57 
+console.log(xx(852))
 
-function eranishtivemeca() {
-    if (815 > 300) {
-        return 10 / 2
-    } else {
-        return 800 / 10
+
+/*57  hashvel ev artacel eranish tvi tasnavorneri ev miavorneri tvanshanneri haraberutyan arjeqe 
+ete eranish tive mec e 300 ic, hakarak depqum haryuravorneri ev miavorneri haraberutyan arjeqe , entadrvume vor erjanish tvi miavorneri tvnashane havasar che zroyi*/
+
+function exercise57(x) {
+    if (x > 300) {
+      return  (Math.floor((x / 10) % 10)) / Math.floor(x % 10)
+    } else{
+        return  (Math.floor( x /100) % 10) / Math.floor(x % 10)
+
     }
-
+    
 }
 
-console.log(eranishtivemeca());
+console.log(exercise57(442));
 
 
 
-//58 
+/*58  simvolayin f popoxakanin  veragrel "a " arjeqe ete eranish tvi tasnavorneri 
+ev haryuravorneri tvanshanneri gumare poqre e 5 ic hakarak depqum "b" arjeq , artacel f i arjeqe;
+*/
+function simvol(x){
+let f;
+if((Math.floor((x / 10) % 10) +  Math.floor(( x /100) % 10) ) < 5 ){
+  f = "a"
+}else{
+    f = "b"
 
-
-function simvol() {
-    let f;
-    if (8 + 1 < 5) {
-        f = 'b';
-    } else {
-        f = 'a';
-    }
-    return f;
+}
+ return console.log(`The f is ${f}`);
 }
 
-console.log(simvol());
+simvol(123)
+//59
+
+//60
