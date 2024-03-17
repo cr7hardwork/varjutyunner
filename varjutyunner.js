@@ -108,10 +108,6 @@ console.log(`if the one of this number is  even return ${magilooperator(2, 1, 1)
 //29 trvac tvere kartacen achman kargi hajordakanutyamb
 
 
-
-
-
-
 // 30
 
 
@@ -316,11 +312,48 @@ console.log(eranishtivv(111, 222))
 
 
 
-//54
+//54 hasvhel ev artacel eranish tvi tvanshanneric mecaguyni arjeqe;
+
+function thehighestnumber(x) {
+    let mecaguynarjeq = 0;
+    if (Math.floor(x / 100) % 10 > mecaguynarjeq) {
+        mecaguynarjeq = Math.floor(x / 100) % 10;
+    }
+    if (Math.floor((x / 10) % 10) > mecaguynarjeq) {
+        mecaguynarjeq = Math.floor((x / 10) % 10);
+    }
+    if (Math.floor(x % 10) > mecaguynarjeq) {
+        mecaguynarjeq = Math.floor(x % 10)
+    }
+    return mecaguynarjeq;
+}
+
+console.log(`mecaguyn tvanshane ${thehighestnumber(981)}`);
+
+
+//55 hasvhel ev artacel eranish tvi tvanshanneric poqraguyni arjeqe
+
+function thelowestnumber(x) {
+    let thelowest = Infinity;
+    if (Math.floor(x / 100) % 10 < thelowest) {
+        thelowest = Math.floor(x / 100) % 10;
+    }
+    if (Math.floor((x / 10) % 10) < thelowest) {
+        thelowest = Math.floor((x / 10) % 10);
+    }
+    if (Math.floor(x % 10) < thelowest) {
+        thelowest = Math.floor(x % 10);
+    }
+    return thelowest;
+}
+
+console.log(`poqraguyn tvanshane ${thelowestnumber(231)}`);
 
 
 
-//55
+
+
+
 
 //56  Hasvhel ev artacel eranish tvi tvanshanneri gumari ev eranish tvi haraberutyan arjeqe , ete miavorneri tvanshane mec i tasnavorneri tvanshanic , hakarak depqum artacel eranish tive
 
@@ -532,18 +565,48 @@ console.log(`the y is ${ifgreatthantwohundred(4444)}`);
 
 
 
-//71 tpel bolor ayn bnkanan tveri gumare voronc vra aranc mnacordi bajanvum a trvac n bnakan tive;
+//151 tpel bolor ayn bnkanan tveri gumare voronc vra aranc mnacordi bajanvum a trvac n bnakan tive;
 
 function bnkanatvervoroncvrabajanvumenbnakantvie(n) {
     let sum = 0;
     for (i = 0; i < n; i++) {
         if (n % i === 0) {
-            sum = sum  + i
+            sum = sum + i
         }
     }
     return sum;
 }
 
-console.log(`the answere is ${bnkanatvervoroncvrabajanvumenbnakantvie(8)}`)
+console.log(`the answere is ${bnkanatvervoroncvrabajanvumenbnakantvie(10)}`)
 
 
+//152 tpel bolor ayn bnakan tveri artadryale voroc vra arajc mnacordi bajanvume trvac n bnakan tvie;
+function tveriartadryal(n) {
+    let product = 1;
+    for (let i = 1; i < n; i++) {
+        if (n % i === 0) {
+            product *= i;
+        }
+    }
+    return product;
+}
+
+console.log(`the answer is ${tveriartadryal(18)}`);
+
+
+//153 tpel bolor ayn bnakan tveri gumare voronc vra trvac n bnakan tvie bajanelis kmna mnacord 2;
+
+
+function mnacorderkus(n) {
+    let sum = 1;
+    for (let i = 1; i < n; i++) {
+        if(n % i !== 0)
+            sum = sum + i
+        }
+
+
+    return sum;
+
+}
+
+console.log(mnacorderkus(4));
