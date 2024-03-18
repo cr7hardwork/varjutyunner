@@ -107,11 +107,39 @@ console.log(`if the one of this number is  even return ${magilooperator(2, 1, 1)
 
 //29 trvac tvere kartacen achman kargi hajordakanutyamb
 
+function achmankargi(numbers) {
+    for (let i = 0; i < numbers.length + 1; i++) {
+        for (let j = 0; j < numbers.length + 1 - i; j++) {
+            if (numbers[j] < numbers[j - 1]) {
+                let temp = numbers[j];
+                numbers[j] = numbers[j - 1];
+                numbers[j - 1] = temp;
+            }
+        }
+    }
 
-// 30
+    return numbers;
+};
+console.log(`achman kargi ${achmankargi([44, 5, 85])}`)
+
+// 30  trac tvere kartacen nvazman kargi
 
 
 
+function nvazman(numbers) {
+    for (let i = 0; i < numbers.length - 1; i++) {
+        for (let j = 0; j < numbers.length - 1 - i; j++) {
+            if (numbers[j] < numbers[j + 1]) {
+                let temp = numbers[j];
+                numbers[j] = numbers[j + 1];
+                numbers[j - 1] = temp;
+            }
+        }
+    }
+
+    return numbers;
+};
+console.log(`achman kargi ${nvazman([44, 5, 85])}`)
 
 
 
@@ -250,10 +278,41 @@ function geometricprogression1(numbers, x) {
 console.log(geometricprogression1([2, 6, 7, 8], 4));
 
 
-//39
+//39 trvac tvere est achmankargi
 
-//40
+function qaranishachman(numbers) {
+    for (let i = 0; i < numbers.length + 1; i++) {
+        for (let j = 0; j < numbers.length + 1 - i; j++) {
+            if (numbers[j] < numbers[j - 1]) {
+                let temp = numbers[j];
+                numbers[j] = numbers[j - 1];
+                numbers[j - 1] = temp;
+            }
+        }
+    }
 
+    return numbers;
+};
+console.log(`achman kargi ${qaranishachman([44, 5, 85, 2])}`)
+
+
+
+//40 trvac tvere est nvazman
+
+function nvazmankargiqaranish(numbers) {
+    for (i = 0; i < numbers.length - 1; i++) {
+        for (let j = 0; j < numbers.length - 1 - i; j++) {
+            if (numbers[j] < numbers[j + 1]) {
+                let temp = numbers[j];
+                numbers[j] = numbers[j + 1];
+                numbers[j + 1] = temp;
+            }
+        }
+    }
+    return numbers
+}
+
+console.log(`nvazman qaranish tver ${nvazmankargiqaranish([485, 1, 6, 856])}`)
 
 /*51   t tramabanakan tipi popoxakanin  veragrel true arjeq , ete eranish tvi miavirneri tvanshane havasar e tasnavorneri ev haryuravorneri  tvanshanneri gumarin , 
 hakarak depqum artacel false , artacel t popoxakani arjeqe*/
@@ -403,7 +462,8 @@ function simvol(x) {
 }
 
 simvol(123)
-//59
+//59 artacel eranish tvi tvanshannere est achman kargi 
+
 
 //60
 
@@ -591,22 +651,49 @@ function tveriartadryal(n) {
     return product;
 }
 
-console.log(`the answer is ${tveriartadryal(18)}`);
+console.log(`the answer is ${tveriartadryal(22)}`);
 
 
 //153 tpel bolor ayn bnakan tveri gumare voronc vra trvac n bnakan tvie bajanelis kmna mnacord 2;
 
 
 function mnacorderkus(n) {
-    let sum = 1;
+    let sum = 0;
     for (let i = 1; i < n; i++) {
-        if(n % i !== 0)
+        if (n % i === 2)
             sum = sum + i
-        }
+    }
 
 
     return sum;
 
 }
 
-console.log(mnacorderkus(4));
+
+console.log(`the answere is ${mnacorderkus(10)}`);
+
+
+
+
+
+//154 tpel bolor ayn bnakan tveri artadryale voronc vra trvac n bnakan tive bajanelis kmna 3 mnacord
+
+
+function mnacordereq(n) {
+    let product = 1;
+    for (let i = 1; i < n; i++) {
+        if (n % i === 3)
+            product = product * i
+    }
+
+
+    return product;
+
+}
+
+
+console.log(`the answere is ${mnacordereq(15)}`);
+
+
+
+//155  tpel bolor ayn erknish tveri gumare voronq bazmapatik en 3 tvin;
