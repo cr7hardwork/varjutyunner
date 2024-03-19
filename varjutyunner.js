@@ -107,7 +107,7 @@ console.log(`if the one of this number is  even return ${magilooperator(2, 1, 1)
 
 //29 trvac tvere kartacen achman kargi hajordakanutyamb
 
-function achmankargi(numbers) {
+function toLowesttoHighest(numbers) {
     for (let i = 0; i < numbers.length + 1; i++) {
         for (let j = 0; j < numbers.length + 1 - i; j++) {
             if (numbers[j] < numbers[j - 1]) {
@@ -120,13 +120,13 @@ function achmankargi(numbers) {
 
     return numbers;
 };
-console.log(`achman kargi ${achmankargi([44, 5, 85])}`)
+console.log(`achman kargi ${toLowesttoHighest([44, 5, 85])}`)
 
 // 30  trac tvere kartacen nvazman kargi
 
 
 
-function nvazman(numbers) {
+function toHighesttoLowest(numbers) {
     for (let i = 0; i < numbers.length - 1; i++) {
         for (let j = 0; j < numbers.length - 1 - i; j++) {
             if (numbers[j] < numbers[j + 1]) {
@@ -139,7 +139,7 @@ function nvazman(numbers) {
 
     return numbers;
 };
-console.log(`achman kargi ${nvazman([44, 5, 85])}`)
+console.log(`achman kargi ${toHighesttoLowest([44, 5, 85])}`)
 
 
 
@@ -152,7 +152,7 @@ function theHighestValueAndanotheristheLowest(numbers) {
     let min = numbers[0];
     let max = numbers[0]
 
-    for (i = 0; i < numbers.length; i++) {
+    for (let i = 0; i < numbers.length; i++) {
         if (numbers[i] < min) {
             min = numbers[i]
         }
@@ -248,39 +248,16 @@ function ifodd(a, b, c, d) {
 console.log(`it is odd or not ,the result is  ${ifodd(7, 18, 18, 18)}`)
 
 
-
-
-function arithmeticprogression1(numbers, x) {
-    for (let i = 0; i < numbers.length; i++) {
-        if (numbers[i] + x) {
-            return true;
-        } else {
-            return false;
-        }
-    }
-}
-
-console.log(arithmeticprogression1([1, 2, 3, 4], 8));
-
+//37
 
 
 //38 
 
-function geometricprogression1(numbers, x) {
-    if (numbers[i] * x) {
-        return true;
-    } else {
-        return false;
-    }
-}
-
-
-console.log(geometricprogression1([2, 6, 7, 8], 4));
 
 
 //39 trvac tvere est achmankargi
 
-function qaranishachman(numbers) {
+function toLowesttoHighestwithfournumber(numbers) {
     for (let i = 0; i < numbers.length + 1; i++) {
         for (let j = 0; j < numbers.length + 1 - i; j++) {
             if (numbers[j] < numbers[j - 1]) {
@@ -293,14 +270,14 @@ function qaranishachman(numbers) {
 
     return numbers;
 };
-console.log(`achman kargi ${qaranishachman([44, 5, 85, 2])}`)
+console.log(`achman kargi ${toLowesttoHighestwithfournumber([44, 5, 85, 2])}`)
 
 
 
 //40 trvac tvere est nvazman
 
-function nvazmankargiqaranish(numbers) {
-    for (i = 0; i < numbers.length - 1; i++) {
+function toHighesttoLowestwithfournumber(numbers) {
+    for (let i = 0; i < numbers.length - 1; i++) {
         for (let j = 0; j < numbers.length - 1 - i; j++) {
             if (numbers[j] < numbers[j + 1]) {
                 let temp = numbers[j];
@@ -312,12 +289,12 @@ function nvazmankargiqaranish(numbers) {
     return numbers
 }
 
-console.log(`nvazman qaranish tver ${nvazmankargiqaranish([485, 1, 6, 856])}`)
+console.log(`nvazman qaranish tver ${toHighesttoLowestwithfournumber([485, 1, 6, 856])}`)
 
 /*51   t tramabanakan tipi popoxakanin  veragrel true arjeq , ete eranish tvi miavirneri tvanshane havasar e tasnavorneri ev haryuravorneri  tvanshanneri gumarin , 
 hakarak depqum artacel false , artacel t popoxakani arjeqe*/
 
-function tvariable(x) {
+function ifthreenumberequal(x) {
     let t;
     if (Math.floor(x % 10) === Math.floor((x / 10) % 10) + Math.floor(x / 100) % 10) {
         t = true
@@ -327,14 +304,14 @@ function tvariable(x) {
     return t
 }
 
-console.log(`The t is ${tvariable(122)}`)
+console.log(`The t is ${ifthreenumberequal(122)}`)
 
 
 
 
 //52  tramabanakan t popoxakanin veragrel ture arjeq , ete eranish tvi tvanshanneri mej kan irar havasar tvanshanner , hakarak depqum false , artacel t popoxakani arjeqe
 
-function tv(x) {
+function iftheyareequal(x) {
     let t;
     if (Math.floor(x % 10) === Math.floor((x / 10) % 10)) {
         t = true;
@@ -349,12 +326,12 @@ function tv(x) {
     return t;
 }
 
-console.log(`The t is ${tv(223)}`);
+console.log(`The t is ${iftheyareequal(223)}`);
 
 
 //53  hashvel ev artacel eranish tvi ev ir tvanshanneri gumari haraberutyan arjeqe ete eranish tvie mece trvac k tvic , hakarak depqum  miavorneri tvanshani ev eranish tvi haraberutyan arjeqe
 
-function eranishtivv(x, k) {
+function dividethreenumber(x, k) {
     if (x > k) {
         return x / (Math.floor(x / 100) % 10 + Math.floor((x / 10) % 10) + Math.floor(x % 10))
     } else {
@@ -363,7 +340,7 @@ function eranishtivv(x, k) {
 
 }
 
-console.log(eranishtivv(111, 222))
+console.log(dividethreenumber(111, 222))
 
 
 
@@ -416,7 +393,7 @@ console.log(`poqraguyn tvanshane ${thelowestnumber(231)}`);
 
 //56  Hasvhel ev artacel eranish tvi tvanshanneri gumari ev eranish tvi haraberutyan arjeqe , ete miavorneri tvanshane mec i tasnavorneri tvanshanic , hakarak depqum artacel eranish tive
 
-function tiv(x) {
+function ifitgreat(x) {
     if (Math.floor(x % 10) > Math.floor((x / 10) % 10)) {
         return (Math.floor(x / 100) % 10 + Math.floor((x / 10) % 10) + Math.floor(x % 10)) / x
     } else {
@@ -424,7 +401,7 @@ function tiv(x) {
     }
 }
 
-console.log(tiv(816))
+console.log(ifitgreat(816))
 
 
 
@@ -433,7 +410,7 @@ console.log(tiv(816))
 /*57  hashvel ev artacel eranish tvi tasnavorneri ev miavorneri tvanshanneri haraberutyan arjeqe 
 ete eranish tive mec e 300 ic, hakarak depqum haryuravorneri ev miavorneri haraberutyan arjeqe , entadrvume vor erjanish tvi miavorneri tvnashane havasar che zroyi*/
 
-function exercise57(x) {
+function ifitgreatthothreehundred(x) {
     if (x > 300) {
         return (Math.floor((x / 10) % 10)) / Math.floor(x % 10)
     } else {
@@ -443,7 +420,7 @@ function exercise57(x) {
 
 }
 
-console.log(exercise57(442));
+console.log(ifitgreatthothreehundred(442));
 
 
 
@@ -629,7 +606,7 @@ console.log(`the y is ${ifgreatthantwohundred(4444)}`);
 
 function bnkanatvervoroncvrabajanvumenbnakantvie(n) {
     let sum = 0;
-    for (i = 0; i < n; i++) {
+    for (let i = 0; i < n; i++) {
         if (n % i === 0) {
             sum = sum + i
         }
@@ -651,7 +628,7 @@ function tveriartadryal(n) {
     return product;
 }
 
-console.log(`the answer is ${tveriartadryal(22)}`);
+console.log(`the answere is ${tveriartadryal(22)}`);
 
 
 //153 tpel bolor ayn bnakan tveri gumare voronc vra trvac n bnakan tvie bajanelis kmna mnacord 2;
@@ -692,8 +669,81 @@ function mnacordereq(n) {
 }
 
 
-console.log(`the answere is ${mnacordereq(15)}`);
+console.log(`the answere is ${mnacordereq(18)}`);
 
 
 
 //155  tpel bolor ayn erknish tveri gumare voronq bazmapatik en 3 tvin;
+
+
+function erknishtverigumare(n) {
+    let sum = 0;
+    for (let i = 10; i < n; i++) {
+        if (i % 3 === 0)
+            sum = sum + i;
+    }
+    return sum;
+}
+
+console.log(`the answere is ${erknishtverigumare(22)}`);
+
+//156 tpel bolor ayn erknish tveri artadryale voronq bazmapatik en 3 ev 5 i;
+
+
+function erknishtviartadryal(n) {
+    let product = 1;
+    for (let i = 10; i < n; i++) {
+        if (i % 3 === 0 && i % 5 === 0)
+            product *= i;
+    }
+    return product;
+}
+
+console.log(`the answere is ${erknishtviartadryal(25)}`);
+
+
+//157 tpel bolro ayn eranish tveri artadryale voronq bazmapatik chen 5 tvin;
+
+function eranishtivebazmapatikche(n) {
+    let sum = 0;
+    for (let i = 100; i < n; i++) {
+        if (i % 5 !== 0) {
+            sum = sum + i;
+        }
+    }
+    return sum;
+}
+
+console.log(`the answere is ${eranishtivebazmapatikche(111)}`);
+
+//158 tpel bolor ayn eranish tveri artadryale,voronq bazmapatik chen 2 ev 3 tvin;
+
+function eranishtveriartadryal(n) {
+    let product = 1;
+    for (let i = 100; i < n; i++) {
+        if (i % 2 !== 0 && i % 3 !== 0) {
+            product *= i;
+        }
+    }
+    return product;
+}
+
+console.log(`the answere is ${eranishtveriartadryal(111)}`);
+
+
+//159 tpel bolor eranish tveri artadryale voronq 3 i bajanelis kmna 1 mnacord is 4 bajanelis 2 mnacord;
+
+function eranishtveriartadryaleereqievchorsi(n){
+    let product = 1; 
+    for(let i = 100; i < n; i++){ 
+        if( i % 3 === 1 && i % 4 === 2){ 
+            product *= i; 
+        }
+    }
+    return product;
+}
+
+console.log(`the answere is ${eranishtveriartadryaleereqievchorsi(111)}`); 
+
+
+//160 
