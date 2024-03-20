@@ -733,17 +733,113 @@ console.log(`the answere is ${eranishtveriartadryal(111)}`);
 
 //159 tpel bolor eranish tveri artadryale voronq 3 i bajanelis kmna 1 mnacord is 4 bajanelis 2 mnacord;
 
-function eranishtveriartadryaleereqievchorsi(n){
-    let product = 1; 
-    for(let i = 100; i < n; i++){ 
-        if( i % 3 === 1 && i % 4 === 2){ 
-            product *= i; 
+function eranishtveriartadryaleereqievchorsi(n) {
+    let product = 1;
+    for (let i = 100; i < n; i++) {
+        if (i % 3 === 1 && i % 4 === 2) {
+            product *= i;
         }
     }
     return product;
 }
 
-console.log(`the answere is ${eranishtveriartadryaleereqievchorsi(111)}`); 
+console.log(`the answere is ${eranishtveriartadryaleereqievchorsi(111)}`);
 
 
-//160 
+//160  tpel ayn amenapoqr eranish tive vore 16 iv bazmapatkelis darnum a bnakan tvi qarakusi;
+
+function smallestThreeDigitNumber() {
+    for (let i = 100; i < 1000; i++) {
+       return Math.sqrt(i * 16)
+    }
+}
+
+console.log(smallestThreeDigitNumber());
+
+
+//161 tpel ayn amenapoqr qaranish tive vore 26 ov bazmapatkelis darnum e bnakan tvi qarakusi;
+
+function smallestFourDigitNumber() {
+    for (let i = 1000; i < 10000; i++) {
+        return Math.floor(Math.sqrt(i * 26))
+    }
+}
+
+console.log(smallestFourDigitNumber());
+
+
+//162 tpel ayn amenamec qaranish tive vore. 14 ov bazmapatkelis darnum e bnakan tvi qaraksui;
+
+function largestFourDigitNumber(){
+    for(let i = 9999 ; i > 1000 ; i--){
+        return Math.floor(Math.sqrt(i * 14))
+    }
+}
+
+console.log(largestFourDigitNumber());
+
+//163 tpel ayn amenamec qaranish tive vore 18 ov bazmapatkelis darnum e  bnakan tvi qarakusi;
+
+function largestFourDigitNumberproductiwth18(){
+    for(let i = 9999; i > 1000; i--){
+        return Math.floor(Math.sqrt(i * 18));
+    }
+};
+
+console.log(largestFourDigitNumberproductiwth18())
+
+//164 tpel ayn amenapoqr eranish tive , vori qarakusi armate mec e trvac n bnakan tvic
+
+
+
+
+//165  t tramabanakan tipi popoxakanin veragrel true arjeq ete trvac n bnakan tive 3 in astichan e hakarak depqum false;
+
+function ifthreenumberisdegree(n){
+    let t;
+    if(Math.cbrt(n) === 3){
+        t = true;
+    }else{
+        t = false;
+    }
+
+    return t;
+}
+
+console.log(`the answere is ${ifthreenumberisdegree(30)}`)
+
+
+//166 y popoxakanin veragrel  0 arjeq ete trvac n bnakan tive 4 in astichan che , hakarak depqum 1;
+
+function yiszeroifitnotrue(n) {
+    let y;
+    if (Math.cbrt(n) !== 4) {
+        y = 0;
+    } else {
+        y = 1;
+    }
+    return y;
+}
+
+console.log(`the answer is ${yiszeroifitnotrue(64)}`);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
